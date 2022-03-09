@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang ="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>PRIMERA PRACTICA DE WEB</title>
+    </head>
+
+    <body> 
+
+        <form action="FORMULARIO" method="get">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Digite su nombre"/>
+            <br>
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Digite su apellido"/>
+            <br>
+            <label for="comentario">Comentario</label>
+            <br>
+            <textarea id="comentario" name="comentario" cols="50" rows="10" placeholder="Digite aqui su comentario"></textarea>
+            <br>
+            <button type="button">Enviar</button>
+            <button type="reset">borrar</button>
+            <button type="submit">Submit</button>
+        </form>
+
+        <h1>PRIMERA PRACTICA DE WEB HTML</h1>
+        <h2>Usos de los atributos de la tabla en html</h2>
+        <h4>El elemento th son para ubicar la primera fila de la tabla
+            encima de las celdas comunes</h4>
+
+        <table border="1" style="margin: 0 auto;">
+            <tr>
+                <th>HOY</th>
+                <th>MAÑANA</th>
+                <th>VIERNES</th>
+            </tr>
+
+            <tr>
+                <td>Soleado</td>
+                <td>Mayormente Soleado</td>
+                <td>Parcialmente nublado</td>
+            </tr>
+
+            <tr>
+                <td>19°C</td>
+                <td>17°C</td>
+                <td>12°C</td>
+            </tr>
+
+            <tr>
+                <td>E 13 Km/h</td>
+                <td>E 11 Km/h</td>
+                <td>S 16 km/h</td>
+            </tr>
+
+        </table>
+
+        <h4>El atributo scope provee un mecanismo para indicar 
+            explícitamente a qué celdas afecta una celda de encabezado. 
+            Este atributo solo puede ser declarado en una celda de encabezado
+            y tomar los valores "col", "row", "colgroup" y "rowgroup". 
+            Los valores "col" y "row" indican que la celda de encabezado 
+            provee información para el resto de las celdas en la columna o 
+            fila (respectivamente) en que está presente.</h4>
+
+            <table border="1" style="margin: 0 auto;">
+                <tr>
+                    <th scope="row">DIA</th>
+                    <th>HOY</th>
+                    <th>MAÑANA</th>
+                    <th>VIERNES</th>
+                </tr>
+    
+                <tr>
+                    <th>CONDICION</th>
+                    <td>Soleado</td>
+                    <td>Mayormente Soleado</td>
+                    <td>Parcialmente nublado</td>
+                </tr>
+    
+                <tr>
+                    <th>TEMPERATURA</th>
+                    <td>19°C</td>
+                    <td>17°C</td>
+                    <td>12°C</td>
+                </tr>
+    
+                <tr>
+                    <th>VIENTOS</th>
+                    <td>E 13 Km/h</td>
+                    <td>E 11 Km/h</td>
+                    <td>S 16 km/h</td>
+                </tr>
+    
+            </table>
+
+            <h2>TITULO</h2>
+            <p>La idea de un título es la de proveer una descripción 
+                concisa acerca de la información presentada en la tabla o 
+                su propósito, aportando contexto y haciéndola significativamente 
+                más fácil de comprender. En HTML, los títulos de las tablas son 
+                insertados mediante el elemento <span style="color: blue;">caption.</span> Ejemplo:</p>
+
+            <table border="1" style="margin: 0 auto;">
+                
+                <caption>
+                    CONSUMOS DE COMBUSTIBLE DE LOS AUTOS A LO LARGO DE LAS PRUEBAS
+                </caption>
+
+                <tr>
+                    <th scope="col">CAR</th>
+                    <th>Enero</th>
+                    <th>Febrero</th>
+                    <th>Marzo</th>
+                </tr>
+
+                <tr>
+                    <th>Chevrolet Camaro</th>
+                    <th>1254 Lts</th>
+                    <th>1582 Lts</th>
+                    <th>685 Lts</th>
+                </tr>
+
+                <tr>
+                    <th>Lamborghini aventador</th>
+                    <th>1854 Lts</th>
+                    <th>1978 Lts</th>
+                    <th>1502 Lts</th>
+                </tr>
+
+            </table>
+    
+            <h1>UNIFICACION DE CELDAS</h1>
+            <h4>La unificación de celdas es un mecanismo mediante el cual un 
+                autor puede combinar o fusionar dos o más celdas adyacentes td y th.
+                Esto se puede lograr con el atributo colspan para unificacion horizontal
+                rowspan para unificacion vertical.
+            </h4>
+
+            <table border="1" style="margin: 0 auto;">
+                <tr>
+                    <th></th>
+                    <th>Dia 1</th>
+                    <th>Dia 2</th>
+                    <th>Dia 3</th>
+                    <th>Dia 4</th>
+                </tr>
+
+                <tr>
+                    <th>Mike (lastimado)</th>
+                    <td colspan="3">0 Km</td>
+                    <td>4 Km</td>
+                </tr>
+
+                <tr>
+                    <th>Susan</th>
+                    <td>23 Km</td>
+                    <td>18 Km</td>
+                    <td>19 Km</td>
+                    <td>15 Km</td>
+                </tr>
+
+            </table>
+
+            <h4>ahora probaremos con el atributo rowspan</h4>
+
+            <table border="1" style="margin: 0 auto;">
+                <tr>
+                    <th></th>
+                    <th>Basico</th>
+                    <th>Completo</th>
+                </tr>
+            
+                <tr>
+                    <th>Instalacion</th>
+                    <td rowspan="2">Gratis!</td>
+                    <td>$49.99</td>
+                </tr>
+
+                <tr>
+                    <th>Primer Año</th>
+                    <td>$19.99</td>
+                </tr>
+
+                <tr>
+                    <th>Segundo Año</th>
+                    <td>$9.99</td>
+                    <td>$29.99</td>
+                </tr>
+                
+            </table>
+
+            <h1>AGRUPACION DE FILAS Y COLUMNAS</h1>
+            <h4>HTML provee tres elementos que pueden ayudar a los 
+                autores a organizar la información presentada en una 
+                tabla. Éstos son: thead, para agrupar las filas que 
+                presentan infromación de encabezado; tfoot para contener 
+                a las filas que representan un pie o resumen; y tbody, 
+                para representar un bloque de filas que consiste en un 
+                cuerpo de datos.</h4>
+
+            <table border="1" style="margin: 0 auto;">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th colspan="2">Anthony</th>
+                        <th colspan="2">Lione</th>
+                    </tr>
+
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th>Entrada</th>
+                        <th>Salida</th>
+                        <th>Entrada</th>
+                        <th>Salida</th>
+                    </tr>
+
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <th>15/07</th>
+                        <td>$200,00</td>
+                        <td>$50,00</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                    </tr>
+
+                    <tr>
+                        <th>28/07</th>
+                        <td>$500,00</td>
+                        <td>$450,00</td>
+                        <td>$340</td>
+                        <td>$870</td>
+                    </tr>
+                    
+                    <tr>
+                        <th>09/08</th>
+                        <td>$0</td>
+                        <td>$3450,00</td>
+                        <td>$50</td>
+                        <td>$90</td>
+                    </tr>
+                    
+                    <tr>
+                        <th>22/08</th>
+                        <td>$245,00</td>
+                        <td>$56,40</td>
+                        <td>$259,00</td>
+                        <td>$10</td>
+                    </tr>
+                    
+                    <tr>
+                        <th>25/08</th>
+                        <td>$900,00</td>
+                        <td>$340,00</td>
+                        <td>$60</td>
+                        <td>$900</td>
+                    </tr>
+
+                </tbody>
+
+                <tfoot>
+                    <tr>
+
+                        <th>Balance</th>
+                        <td colspan="2">$20,00</td>
+                        <td colspan="2">$90.00</td>
+                    </tr>
+
+                </tfoot>
+
+            </table>
+
+            <h4>ahora agruparemos las columnas</h4>
+            <h4>usando los elementos colgroup, pero no se deber ser usando
+                simplemente para hacer que tengan el mismo aspecto para eso 
+                tenemos el elemento col. cada elemento declarado en este bloque
+                definira un grupo con la ayuda del atributo span el cual indica
+                el numero de columnas que presenta este grupo.</h4>
+            
+            <table border="1" style="margin: 0 auto;">
+                <colgroup>
+
+                    <colgroup span="2" style="background: rgba( 128, 255, 0, 0.3); border: 1px solid rgba( 100, 200, 0, 0.3);">
+                    <colgroup span="2" style="background: rgba( 255, 128, 0, 0.3); border: 1px solid rgba ( 200, 100, 0, 0.3);">
+                    
+                        <tr>
+                            <th></th>
+                            <th colspan="2">Mike</th>
+                            <th colspan="2">Tara</th>
+                        </tr>
+
+                        <tr>
+                            <th></th>
+                            <th>Primera Prueba</th>
+                            <th>Segunda Prueba</th>
+                            <th>Primera Prueba</th>
+                            <th>Segunda Prueba</th>
+                        </tr>
+
+                        <tr>
+                            <th>Dia 1</th>
+                            <th>25 Km</th>
+                            <th>38 Km</th>
+                            <th>28 Km</th>
+                            <th>37 Km</th>
+                        </tr>
+
+                        <tr>
+                            <th>Dia 2</th>
+                            <th>22 Km</th>
+                            <th>35 Km</th>
+                            <th>30 Km</th>
+                            <th>35 Km</th>
+                        </tr>
+                        
+            </table>
+
+            <p>para mas informacion en la pagina</p>
+            <a href="https://www.htmlquick.com/es/tutorials/tables.html">TABLAS EN HTML</a>
+
+    </body>
+</html>
